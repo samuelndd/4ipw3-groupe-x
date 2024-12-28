@@ -38,7 +38,7 @@ include_mvc_php_files();
 // making router more universal => using superglobal REQUEST instead of POST or GET
 //$_REQUEST c'est get ou post l'union de get et post
 //@ si a un proble me n'est pas envoyer de message a lecrant
-$page = $_REQUEST['page'] ?? 'home';
+$page =  $_REQUEST['page'] ?? 'home';
 $main = "main_{$page}";
 echo $main();
 
