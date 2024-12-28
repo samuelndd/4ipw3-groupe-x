@@ -10,8 +10,8 @@ function html_head($menu_a=[], $user_id="", $user_role="")
     <html lang="fr">
     <head>
         <title>AWebWiz Template (MVC)</title>
-        <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />  <!-- lib externe -->
-        <link rel="stylesheet" href="./css/internal/main.css" /> <!-- lib interne / perso -->
+        <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css"/>  <!-- lib externe -->
+        <link rel="stylesheet" href="../css/internal/main.css" /> <!-- lib interne / perso -->
         <script
                 src="https://code.jquery.com/jquery-3.4.1.js"
                 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
