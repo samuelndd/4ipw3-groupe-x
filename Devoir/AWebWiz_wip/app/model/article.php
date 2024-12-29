@@ -5,7 +5,7 @@
  * en première position
  * temporairement c'est l'article d'id 1
  * @param $art_id id de l'article à getter dans la db
- * @return assoc array avec les données de l'article
+ * @return //assoc array avec les données de l'article
  */
 function get_article_a($art_id=1)
 {
