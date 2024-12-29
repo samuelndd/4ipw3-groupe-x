@@ -32,6 +32,7 @@ function get_article_a_json($art_id)
 
 function get_article_a_sql($art_id)
 {
+    //recuperer un article
     $q = <<< SQL
         SELECT
             ident_art AS id,
