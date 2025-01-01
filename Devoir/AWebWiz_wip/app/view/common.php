@@ -1,6 +1,6 @@
 <?php
 
-function html_head($menu_a=[], $user_id="", $user_role="")
+function html_head($menu_a, $logor_a=[], $user_id="", $user_role="")
 {
     $debug = false;
 	ob_start();
@@ -19,11 +19,44 @@ function html_head($menu_a=[], $user_id="", $user_role="")
 	</head>
 	<body>
     <header>
-        <h1>
-            France 24 (MVC)
-            <img src="./media/icon3.png">
-        </h1>
+        <div class="container">
+                <div class="top-bar">
+                    <div class="top-bar-left">
+                        <div class="logo"><a href="index.html"><img src="./media/newswire_logo_final.svg"></a></div>
+                    </div>
+                    <div class="top-bar-right">
+                        <ul>
+                            <li><a href="#"> • </a></li>
+                            <li><a href="#">Questions? +1 (202) 335-3939 </a></li>
+                            <li><a href="#"> • </a></li>
+                            <li><a href="#">Pricing and comparison Chart </a></li>
+                            <li><a href="#"> • </a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#"> • </a></li>
+
+                            <?php
+                            //c est la boucle utliser pour le menu
+                            foreach( $logor_a as $logor)
+                            {
+                                $text = $logor[0];
+                                $link = $logor[1];
+                                $option = isset($logor[2]) ? "&name={$logor[2]}" : "";
+                                echo <<< HTML
+                <a href="?page=$link$option">$text</a> | 
+HTML;
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        <div class="button-container">
+            <button class="submit-button">Submit release</button>
+        </div>
+
         <?php
+        //c est la boucle utliser pour le menu
         foreach( $menu_a as $menu)
         {
             $text = $menu[0];
@@ -35,6 +68,7 @@ HTML;
         }
         ?>
         Welcome, <?=$user_id?> (<?=$user_role?>).
+
     </header>
     <main>
     <?php

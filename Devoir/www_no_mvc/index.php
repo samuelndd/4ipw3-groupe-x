@@ -25,7 +25,7 @@ if(isset($_POST['set_logout']))
 
 if(isset($_POST['set_login']))
 {
-    // qqn a cliqué sur le bouton "log".
+    // qqn a cliqué sur le bouton "logor.csv".
     $login_name = $_POST['my_login'];
     $is_login_valid = check_login($login_name);
     if($is_login_valid)
@@ -117,7 +117,7 @@ if( $is_login_valid )
     echo <<< HTML
     <form method="post">
         <p>Bienvenue {$login_name}</p>
-        <button type="submit" name="set_logout">log out</button>
+        <button type="submit" name="set_logout">logor.csv out</button>
     </form>
 HTML;
 }

@@ -53,9 +53,9 @@ function display_cart(cart_data)
     console.log(cart_data);
 
     // $.cookie("favorite", 1, { expires : 10 });
-    // console.log( $.cookie("favorite"));
-    // console.log(Cookies.get("favorite"));
-    // console.log(readCookie('favorite'));
+    // console.logor.csv( $.cookie("favorite"));
+    // console.logor.csv(Cookies.get("favorite"));
+    // console.logor.csv(readCookie('favorite'));
 
     // on efface le panier courant
     // $("ul#panier_contenu").html("");
@@ -89,7 +89,7 @@ function display_cart(cart_data)
     // $.each( $('article'), function( i, el ) {
     //     const id = $(this).attr('id');
     //     const foundPresent = cart_data.includes( id );
-    //     console.log(foundPresent);
+    //     console.logor.csv(foundPresent);
     //     if(foundPresent)
     //     {
     //         // produit in panier => add KO, del OK

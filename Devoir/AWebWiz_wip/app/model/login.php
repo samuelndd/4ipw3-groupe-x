@@ -12,6 +12,7 @@ function login_validate($input)
 	{
 		// lecture fichier
 		$fh = fopen( '../asset/database/login.csv', 'r' );
+        //end of file
 		while( ! feof($fh) )
 		{
 			$ligne = fgets($fh);

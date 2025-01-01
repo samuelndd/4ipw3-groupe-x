@@ -3,9 +3,94 @@ body
 {
     font-size: medium;
     /* font-size:10px; */
-    width:600px;
+    width: 1000px;
     margin:auto;
+
 }
+
+
+
+
+
+
+
+
+.container {
+    background-color: red;
+
+}
+
+
+
+.top-bar {
+    display: flex;
+    padding: 20px 11px 20px;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.75em;
+    padding: 10px 190px ;
+
+}
+.top-bar-right ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar-right li {
+    flex-grow: 1; /* Permet aux éléments de croître pour occuper l'espace disponible */
+    text-align: center; /* Centre le texte dans chaque élément */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+}
+
+.top-bar-left img:first-of-type {
+    width: 250px; /* Ajuste la largeur selon vos besoins */
+}
+
+
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*classe flexbox permettant de placer à droite le "submit" boutton*/
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 a
 {
@@ -24,12 +109,6 @@ header h1
 {
     font-family: Arial, sans-serif;
     font-size:large;
-    text-align:center;
-}
-
-header h1 img
-{
-    width: 50px;
 }
 
 

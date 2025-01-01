@@ -26,7 +26,7 @@ require_once("model.php");
 
     if(isset($_POST['set_login']))
     {
-        // qqn a cliqué sur le bouton "log".
+        // qqn a cliqué sur le bouton "logor.csv".
         $login = $_POST['my_login'];
         $is_valid = check_login($login);
         if($is_valid)
@@ -114,7 +114,7 @@ and $_SESSION['login']['is_logged'] )
     echo <<< HTML
     <form method="post">
         <p>Bienvenue {$_SESSION['login']['name']}</p>
-        <button type="submit" name="set_logout">log out</button>
+        <button type="submit" name="set_logout">logor.csv out</button>
     </form>
 HTML;
 }
