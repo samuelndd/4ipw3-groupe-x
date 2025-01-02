@@ -3,8 +3,9 @@ body
 {
     font-size: medium;
     /* font-size:10px; */
-    width: 1000px;
+    width: 80%;
     margin:auto;
+    background-color: #e3bf11;
 
 }
 
@@ -16,7 +17,7 @@ body
 
 
 .container {
-    background-color: red;
+    background-color: white;
 
 }
 
@@ -30,9 +31,8 @@ body
 .top-bar-right {
     display: flex;
     align-items: center;
-    gap: 15px;
     font-size: 0.75em;
-    padding: 10px 190px ;
+    padding: 0px 415px ;
 
 }
 .top-bar-right ul {
@@ -61,15 +61,15 @@ body
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /*classe flexbox permettant de placer à droite le "submit" boutton*/
 .button-container {
     display: flex;
     justify-content: flex-end;
-    padding: 15px 0px;
+    padding: 10px 0px;
+    background-color: #e3bf11;
 
 }
 
@@ -120,7 +120,7 @@ header div.button_bar
 header div.search_bar
 {
     text-align:right;
-    background-color:Cornsilk ;
+    background-color:red ;
 }
 
 
@@ -247,22 +247,29 @@ div.recap td.prix
 {
     font-family: Courier, monospace ;
     text-align: right;
+    background-color: lightpink;
+
 }
 
 hr
 {
     clear: both;
+
 }
 
 header, footer
 {
-    background-color:lightcyan ;
+    background-color:  #333 ;
+    padding: 0px 0px 20px;
+    font-size: 1em;
+
 }
 
 footer img
 {
     width: 40px;
     height: 30px;
+
 }
 
 /* Menu */
@@ -272,13 +279,16 @@ ul.menu
     margin:0;
     list-style-type:none;
     /*text-align:right;*/
+
 }
 
 ul.menu li
 {
     display:inline-block;
     text-decoration:none;
-    padding:5px;
+    padding:500px;
+
+
 }
 
 main section.breaking article
