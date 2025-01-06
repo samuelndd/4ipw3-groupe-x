@@ -379,7 +379,7 @@ div.media_article img
 .social-media {
     display: flex;
     align-items: center;
-    margin -top: 20px;
+    margin-top: 20px;
 }
 
 .social-media img {
@@ -393,8 +393,3 @@ hr {
     width: 100%;
     margin: 20px 0;
 }
-                                                                                                                                                                                            font-size: 14px;
-    width: 100%; /* Fait que le texte de copyright occupe toute la largeur */
-}
-
-/* Fin Footer */
