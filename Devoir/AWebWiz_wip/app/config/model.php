@@ -1,9 +1,18 @@
 <?php
+// const et define sont equivalents
+//const ne peux que etre  utiliser qu'on tete de fichier
+
+
+
+
+//la c'est in constance avec son nom et sa valeur const MACHINE = "classe38";
 
 const MACHINE = "classe38"; // "classe38" ou  "home" ou ... ce qu'on veut
 
 /**
  * DATABASE_TYPE : "SQL" ou "JSON"
+ * la c'est in constance avec son nom et sa valeur const DATABASE_TYPE = "SQL";
+
  */
 const DATABASE_TYPE = "SQL";
 
@@ -16,6 +25,7 @@ switch (DATABASE_TYPE) {
         break;
 }
 
+//2 conficque avec fonction MACHINE
 switch(MACHINE) {
 	// ISFCE, classe 38
 	case "classe38":

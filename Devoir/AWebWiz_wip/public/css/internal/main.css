@@ -21,8 +21,6 @@ body
 
 }
 
-
-
 .top-bar {
     display: flex;
     padding: 20px 11px 20px;
@@ -90,6 +88,13 @@ body
 
 
 
+.menu
+{
+    padding: 25px 50px 0px;
+    color: #ffffff;
+    background-color: #6a6262; /* Couleur de fond sombre */
+
+}
 
 
 a
@@ -253,13 +258,14 @@ div.recap td.prix
 
 hr
 {
+
     clear: both;
 
 }
 
-header, footer
+header
 {
-    background-color:  #333 ;
+    background-color: #6a6262; /* Couleur de fond sombre */
     padding: 0px 0px 20px;
     font-size: 1em;
 
@@ -284,10 +290,10 @@ ul.menu
 
 ul.menu li
 {
+
     display:inline-block;
     text-decoration:none;
     padding:500px;
-
 
 }
 
@@ -323,3 +329,72 @@ div.media_article img
 {
     width:600px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Début Footer */
+.footer {
+    background-color: #6a6262; /* Couleur de fond sombre */
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+.footer-section {
+    min-width: 200px;
+    margin: 0 2%; /* Réduit l'espace entre les colonnes et l'exprime en pourcentage */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    margin -top: 20px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+hr {
+    border: 0;
+     border-top: 1px solid #444; /* Couleur de la ligne horizontale */
+    width: 100%;
+    margin: 20px 0;
+}
+                                                                                                                                                                                            font-size: 14px;
+    width: 100%; /* Fait que le texte de copyright occupe toute la largeur */
+}
+
+/* Fin Footer */

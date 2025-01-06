@@ -24,7 +24,7 @@ function html_login_button($user="inconnu")
 {
 	ob_start();
 	?>
-    <a href="?page=login&action=login">log in</a>
+    <a href="?page=login&action=login">log in </a>
     <?php
 	return ob_get_clean();
 }

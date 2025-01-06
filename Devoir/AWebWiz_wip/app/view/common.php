@@ -55,19 +55,22 @@ HTML;
             <button class="submit-button">Submit release</button>
         </div>
 
-        <?php
-        //c est la boucle utliser pour le menu
-        foreach( $menu_a as $menu)
-        {
-            $text = $menu[0];
-            $link = $menu[1];
-            $option = isset($menu[2]) ? "&name={$menu[2]}" : "";
-            echo <<< HTML
-                <a href="?page=$link$option">$text</a> | 
+        <div class="menu">
+            <?php
+            //c est la boucle utliser pour le menu
+            foreach( $menu_a as $menu)
+            {
+                $text = $menu[0];
+                $link = $menu[1];
+                $option = isset($menu[2]) ? "&name={$menu[2]}" : "";
+                echo <<< HTML
+                <a href="?page=$link$option">$text</a> 
 HTML;
-        }
-        ?>
-        Welcome, <?=$user_id?> (<?=$user_role?>).
+            }
+            ?>
+            Welcome, <?=$user_id?> (<?=$user_role?>).
+        </div>
+
 
     </header>
     <main>
@@ -90,11 +93,49 @@ function html_foot()
 	ob_start();
 	?>
         </main>
-        <footer>
-            <hr />
-            Made with the amazing AWebWiz framework
-            <img src="./media/awebwiz.png" alt="AWebWiz logo">
-        </footer>
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="#">Why Us</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Distribution</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Newsrooms</h3>
+            <ul>
+                <li><a href="#">All Newswires</a></li>
+                <li><a href="#">World Newswires</a></li>
+                <li><a href="#">US Newswires</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Help/Support</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Video Tutorials</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Career Opportunities</a></li>
+                <li><a href="#">Investor Inquiries</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="media/square-facebook.svg"></a>
+            <a href="#"><img src="media/square-x-twitter.svg" ></a>
+            <a href="#"><img src="./media/linkedin.svg"></a>
+        </div>
+        <hr>
+        <div class="footer-copyright">
+            &copy; 1995-2024 Newsmatics Inc. dba <a href="#">EIN Presswire</a> All Right Reserved.
+        </div>
+    </footer>
 	</body>
 	</html>
 	<?php

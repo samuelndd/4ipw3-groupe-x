@@ -32,7 +32,7 @@ function main_login()
 		// l'utilisateur est déjà identifié
         // => on lui propose le logout
         $msg .= html_logout_button();
-	}
+    }
 	else
 	{
 		// l'utilisateur n'est pas identifié
