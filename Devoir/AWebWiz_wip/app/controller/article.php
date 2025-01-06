@@ -15,6 +15,6 @@ function main_article()
     return join( "\n", [
         ctrl_head(),
         html_article_main($article_a),
-        html_foot(),
+        html_foot()
     ]);
 }
