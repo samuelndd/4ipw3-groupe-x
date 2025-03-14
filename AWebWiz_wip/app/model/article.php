@@ -56,7 +56,7 @@ SQL;
 function get_bottom_article_a()
 {
     $art_aa = [];
-    foreach( [ 2, 3, 4 ] as $art_id)
+    foreach( [ 2, 3, 4, 5 ] as $art_id)
     {
         $art_aa[] = get_article_a($art_id);
     }
