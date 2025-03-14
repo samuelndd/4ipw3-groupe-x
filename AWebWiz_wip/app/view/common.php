@@ -18,7 +18,7 @@ function html_head($menu_a=[], $user_id="", $user_role="")
         <script src="./js/internal/favorite.js"></script>
     </head>
     <body>
-    <header>    <header>
+    <header>
         <div class="container">
                 <div class="top-bar">
                     <div class="top-bar-left">
