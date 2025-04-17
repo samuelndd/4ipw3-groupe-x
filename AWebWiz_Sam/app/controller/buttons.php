@@ -5,6 +5,7 @@
 
 function get_font_dropdown() {
     // Tableau des polices proposées
+    //menu déroulant
     $fonts = [
         "" => " Défaut",
         "Arial, sans-serif" => "Arial",

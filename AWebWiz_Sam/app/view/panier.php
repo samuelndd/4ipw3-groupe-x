@@ -27,7 +27,7 @@ function html_panier_main()
             <article>
                 <h3><?= $article['title'] ?></h3> <!-- Affiche le titre de l'article -->
                 <p><?= $article['hook'] ?></p> <!-- Affiche l'accroche de l'article -->
-                <a href="?page=article&art_id=<?= $article['id'] ?>">Voir l'article</a> <!-- Lien vers l'article -->
+                <a href="?page=article&art_id=<?= $article['id'] ?>" >Voir l'article</a> <!-- Lien vers l'article -->
                 <a href="?page=panier&action=remove&art_id=<?= $article['id'] ?>" class="btn btn-danger">Retirer</a> <!-- Bouton de suppression des favoris -->
             </article>
         <?php endforeach; ?>
