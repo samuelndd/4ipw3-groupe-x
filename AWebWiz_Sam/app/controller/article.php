@@ -9,19 +9,14 @@ require_once '../app/view/article.php';
 //Fonction pour gère l'affichage des articles.
 function main_article()
 {
-    // Récupération de l'identifiant de l'article depuis l'URL (paramètre GET 'art_id').
-    // Si le paramètre n'est pas défini, on utilise par défaut la valeur '1'.
-    $art_id = $_GET['art_id'] ?? '1';
-    // Récupérer les données de l'article correspondant à l'identifiant avec la fonction get_article_a .
-    $article_a = get_article_a($art_id);
-
-    // Permet d'assembler les parties avec un retour à la ligne ("\n").
-    // Générer la page HTML
-    return join("\n", [
-        ctrl_head(),
-        html_article_main($article_a),
-        html_foot(),
-    ]);
+    header('Content-Type: application/json');
+    $art_id = $_GET['art_id'] ?? null;
+    if (!$art_id) {
+        echo json_encode(['error' => 'Missing art_id']);
+        return;
+    }
+    $article = get_article_a($art_id);
+    echo json_encode($article);
 }
 
 ?>

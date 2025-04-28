@@ -10,12 +10,14 @@
 
 <script>
 el = document.getElementById("01");
+//alert une fonction qui va arretr le programmer et afficher un message
 alert("texte original:" + el.innerHTML );
 
+//modifier le contenu '01'
 el.innerHTML = "Bonjour";
 alert("après première transformation:" + el.innerHTML );
 
-// conversion en majuscule
+// toUpperCase conversion en majuscule le 'BONJOUR'
 el.innerHTML = el.innerHTML.toUpperCase();
 alert("après deuxième transformation:" + el.innerHTML );
 

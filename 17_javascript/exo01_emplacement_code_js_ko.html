@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8 />
-<title>Emplacement JS KO</title>
+    <meta charset="utf-8" />
+    <title>Emplacement JS KO</title>
+
+    <script>
+        // Cette fonction sera appelée automatiquement quand la page est chargée
+        function on_load() {
+            var x = 5; //local
+            y = 6; //global
+            // On récupère l'élément HTML ayant l'ID "01"
+            //let el = document.getElementById("01");
+
+            // On remplace le texte "Bienvenue" par "Bonjour"
+            //el.innerHTML = "Bonjour";
+
+            // On transforme le texte en majuscules : "Bonjour" devient "BONJOUR"
+            //el.innerHTML = el.innerHTML.toUpperCase();
+
+            // On affiche un message dans la console (pour les développeurs)
+            console.log("page" + " " + "chargée");
+
+            //je met en console le contenue des different element qui viennet de example qui veut dire la classe example
+            //en recupere avec querySelectorAll une collection d'elemnet de la page avec une boucle example_l
+            const example_l = document.querySelectorAll(".example");
+            //une boucle example_l avec une collection
+            //forEach , item on peut mettre n'importe quoi c'est l'object a chaque boucle il change de valeur et prend chaqye object de la collection
+            example_l.forEach(o =>{
+                console.log(o.innerHTML)
+                //le o existe que dans la parentaise
+            });
+
+            //creer une ligne
+            const barre = document.createElement("div");
+            const b = document.getElementsByTagName("body")[0];
+            b.appendChild(barre);
+            barre.innerHTML = "fin de soirée";
+            barre.setAttribute("style", "color:red;");
+
+        }
+
+    </script>
 </head>
 
-<body>
-<script>
-el = document.getElementById("01");
-el.innerHTML = "Bonjour";
-</script>
-   
-<div id="01">Bienvenue</div>   
+<!-- Le corps de la page, avec un événement onload qui déclenche la fonction on_load -->
+<body onload="on_load()">
+
+
+<h1 id="demo"> page d'accueil </h1>
+
+<!-- Cet élément affichera d'abord "Bienvenue", mais sera changé en "BONJOUR" au chargement -->
+<div id="01" class="example" >Bienvenue</div>
+
+<div id="02">Bienvenue a tous</div>
+
+<div id="03" class="example">Bienvenue à vous tous</div>
+
+
+
 </body>
 </html>
