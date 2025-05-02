@@ -8,25 +8,31 @@ require_once '../app/view/article.php';
  * @param $role
  */
 
-function html_home_main($article_a, $bottom_article_a)
+function html_home_main(array $featured, array $all): string
 {
     // Je récupère le titre, l'accroche et l'ID de l'article principal.
-    $title = $article_a['title'];
-    $hook = $article_a['hook'];
-    $art_id = $article_a['id'];
+    // copie de html_article_main, mais en version « featured »
+    $id       = (int)$featured['id'];
+    $title    = htmlspecialchars($featured['title']);
+    $hook     = htmlspecialchars($featured['hook']);
+    $img_src  = MEDIA_ARTICLE_PATH . $featured['image_name'];
+    $summary  = $hook ?: substr(strip_tags($featured['content']), 0, 150) . '...';
 
     ob_start();
     ?>
     <section class="breaking">
         <article>
             <!-- Affichage du titre de l'article principal avec un lien vers la page de détail -->
-            <a href="?page=article&art_id=<?=$art_id?>"><h1><?=$title?></h1></a>
+            <a href="?page=article&art_id=<?= $id ?>"><h1><?= $title ?></h1></a>
             <!-- Affichage de l'accroche de l'article principal -->
             <h2><?=$hook?></h2>
+            <div class="media_article"><img src="<?= $img_src ?>" alt="<?= $title ?>"></div>
+            <p><?=htmlspecialchars($summary)?></p>
         </article>
     </section>
+
+    <!-- ce conteneur sera rempli par AJAX -->
+    <section id="home-articles" class="other"></section>
     <?php
-    // Appeler html_all_articles_main pour afficher les autres articles
-    echo html_all_articles_main($bottom_article_a);
     return ob_get_clean();
 }

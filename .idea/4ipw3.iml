@@ -4,7 +4,8 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/17_javascript" />
       <excludeFolder url="file://$MODULE_DIR$/18_framework_jQuery" />
-      <excludeFolder url="file://$MODULE_DIR$/AWebWiz_Sam" />
+      <excludeFolder url="file://$MODULE_DIR$/19_architecture_AJAX" />
+      <excludeFolder url="file://$MODULE_DIR$/AWebWiz_start" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

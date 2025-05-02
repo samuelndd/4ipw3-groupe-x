@@ -7,16 +7,18 @@ require_once '../app/model/article.php';
 require_once '../app/view/article.php';
 
 //Fonction pour gère l'affichage des articles.
+
 function main_article()
 {
-    header('Content-Type: application/json');
-    $art_id = $_GET['art_id'] ?? null;
-    if (!$art_id) {
-        echo json_encode(['error' => 'Missing art_id']);
-        return;
-    }
-    $article = get_article_a($art_id);
-    echo json_encode($article);
-}
+    // 1) On récupère l'ID en GET (par défaut 1 si rien)
+    $art_id = $_GET['art_id'] ?? '1';
+    // 2) On va chercher l'article dans le modèle
+    $article_a = get_article_a($art_id);
 
-?>
+    // 3) On assemble l'en-tête, le détail et le pied
+    return join("\n", [
+        ctrl_head(),
+        html_article_main($article_a),
+        html_foot(),
+    ]);
+}
