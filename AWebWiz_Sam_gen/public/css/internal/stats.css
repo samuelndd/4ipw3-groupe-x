@@ -1,0 +1,62 @@
+.stats-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: cadetblue;
+    text-align: center;
+}
+
+.table-stats {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+.table-stats th {
+    background-color: cadetblue;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.table-stats tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-stats td {
+    padding: 10px 15px;
+}
+
+.category-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #e0f7fa;
+    color: #007b8a;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.category-pill:hover {
+    background-color: #b2ebf2;
+    transform: translateY(-2px);
+}
+
+.category-icon {
+    font-size: 1.2rem;
+}
+
+.id-cell {
+    color: #555;
+    font-family: monospace;
+}
+
+.count-cell {
+    font-weight: bold;
+    text-align: center;
+}
