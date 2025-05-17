@@ -1,0 +1,279 @@
+
+/* =============================================================================
+   1. RESET & VARIABLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* couleurs */
+    --color-primary:    #1F8DD6;
+    --color-secondary:  #fafafa;
+    --color-accent:     #e0f7fa;
+    --text-color:       #333;
+    --bg-color:         #fff;
+
+    /* mise en page */
+    --gap:              1rem;
+    --radius:           8px;
+
+    /* typo */
+    --font-base:       "Arial Narrow", sans-serif;
+}
+
+body {
+    font-family: var(--font-base);
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+    width: 80%;
+    margin: auto;
+}
+
+/* =============================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    background: var(--color-primary);
+    padding: 1rem 0 2rem;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+nav#menu {
+    display: flex;
+    gap: var(--gap);
+    justify-content: center;
+    padding: var(--gap) 0;
+}
+
+nav#menu a {
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =============================================================================
+   3. PAGE D’ACCUEIL
+   ========================================================================== */
+/* 3.1 Article Principal */
+.featured {
+    background: var(--color-accent);
+    padding: 2rem;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    position: relative;
+}
+.featured img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: var(--gap);
+}
+.featured h1 {
+    margin-bottom: .5rem;
+}
+
+/* 3.2 Grille des autres articles */
+.other {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--gap);
+    margin-bottom: 2rem;
+}
+
+.other article {
+    background: cadetblue;
+    border-radius: var(--radius);
+    overflow: hidden;
+    color: cadetblue; /* meilleur contraste */
+    transition: transform .2s, box-shadow .2s;
+}
+
+.other article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.article-title,
+.article-hook {
+    color: cadetblue;
+}
+
+
+
+.other .thumb {
+    width: 100%;
+    padding-top: 56.25%; /* ratio 16:9 */
+    position: relative;
+    overflow: hidden;
+}
+
+.other .thumb img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.other h3 {
+    padding: var(--gap) var(--gap) 0;
+    font-size: 1.1rem;
+}
+
+.other p {
+    padding: 0 var(--gap) var(--gap);
+    font-size: .9rem;
+    color: #555;
+}
+
+/* =============================================================================
+   4. PAGE “PRESSE” (cartes)
+   ========================================================================== */
+.press-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--gap);
+    padding: var(--gap);
+}
+
+.press-card {
+    background: var(--bg-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.press-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.press-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.press-card .card-body {
+    padding: var(--gap);
+}
+
+.press-card h5 {
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+}
+
+.press-card .meta {
+    font-size: .85rem;
+    color: #999;
+    margin-bottom: .75rem;
+}
+
+.press-card p {
+    margin: 0;
+    font-size: .95rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* =============================================================================
+   5. DÉTAIL D’ARTICLE & BOUTONS FAVORIS
+   ========================================================================== */
+.media_article img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+    margin: var(--gap) 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-right: .5rem;
+}
+.btn-success { background: #28a745; }
+.btn-danger  { background: #dc3545; }
+
+/* =============================================================================
+   6. FOOTER
+   ========================================================================== */
+.footer {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap);
+}
+
+.footer-section {
+    min-width: 200px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: .5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: .5rem;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+.article-title {
+    font-size: 1.2rem;
+    color: cadetblue;
+    margin: 0.5rem 0;
+}
+.article-hook {
+    font-size: 0.95rem;
+    color: cadetblue;
+}
+.btn-primary {
+    display: inline-block;
+    margin: 0.5rem 0;
+    padding: 0.4rem 1rem;
+    background-color: cadetblue;
+    color: cadetblue;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.btn-primary:hover {
+    background-color: cadetblue;
+}
+
+
+
+
+
