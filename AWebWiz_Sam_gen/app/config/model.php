@@ -2,7 +2,7 @@
 
 //je peux pas mettre conste partout
 //envirenoment de developement
-const MACHINE = "classe38"; // "classe38" ou  "home" ou ... ce qu'on veut
+const MACHINE = "home"; // "classe38" ou  "home" ou ... ce qu'on veut
 
 /**,
  * DATABASE_TYPE : "SQL" ou "JSON"
